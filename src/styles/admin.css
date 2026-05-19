@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+}
+
+
+
+/* MAIN PAGE */
+
+.admin-page{
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+
+
+/* HERO SECTION */
+
+.admin-hero{
+
+    width: 100%;
+
+    padding: 80px 20px 140px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #4338ca,
+        #7c3aed
+    );
+
+    color: white;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+/* HERO GLOW */
+
+.admin-hero::after{
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    top: -200px;
+
+    right: -100px;
+
+}
+
+
+
+/* HERO TEXT */
+
+.admin-hero h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.admin-hero p{
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+
+
+/* DASHBOARD GRID */
+
+.admin-dashboard{
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: -80px auto 0;
+
+    padding: 20px 30px 60px;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+
+    align-items: start;
+
+    gap: 30px;
+
+}
+
+
+
+/* CARD */
+
+.admin-card{
+
+    background: rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    position: relative;
+
+    margin-top: 80px;
+
+}
+
+
+
+/* CARD TOP LINE */
+
+.admin-card::before{
+
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 5px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* CARD HOVER */
+
+.admin-card:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+
+
+/* CARD HEADING */
+
+.admin-card h2{
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    color: #222;
+
+}
+
+
+
+/* FORM */
+
+.admin-card form{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+
+/* INPUTS */
+
+.admin-card input,
+.admin-card textarea{
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    background: #fafafa;
+
+}
+
+
+
+/* PLACEHOLDER */
+
+.admin-card input::placeholder,
+.admin-card textarea::placeholder{
+
+    color: #999;
+
+}
+
+
+
+/* INPUT FOCUS */
+
+.admin-card input:focus,
+.admin-card textarea:focus{
+
+    border-color: #4f46e5;
+
+    background: white;
+
+    box-shadow:
+    0 0 0 4px rgba(79,70,229,0.1);
+
+}
+
+
+
+/* TEXTAREA */
+
+.admin-card textarea{
+
+    resize: none;
+
+    height: 150px;
+
+}
+
+
+
+/* BUTTON */
+
+.admin-card button{
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+
+/* BUTTON HOVER */
+
+.admin-card button:hover{
+
+    transform: translateY(-2px);
+
+    box-shadow:
+    0 10px 20px rgba(79,70,229,0.3);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .admin-hero{
+        padding: 60px 20px 120px;
+    }
+
+    .admin-hero h1{
+        font-size: 42px;
+    }
+
+    .admin-hero p{
+        font-size: 16px;
+    }
+
+    .admin-dashboard{
+        margin-top: -60px;
+        padding: 20px;
+    }
+
+    .admin-card{
+        padding: 24px;
+    }
+
+    .admin-card h2{
+        font-size: 28px;
+    }
+
+}
