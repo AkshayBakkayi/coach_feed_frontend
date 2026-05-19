@@ -19,7 +19,7 @@ function User() {
 
     const [notes, setNotes] = useState([]);
 
-    const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
 
 
@@ -113,13 +113,13 @@ function User() {
 
             setNotes(response.data);
 
-            setLoading(false);
+            setIsLoading(false);
 
         } catch (error) {
 
             console.log(error);
 
-            setLoading(false);
+            setIsLoading(false);
 
         }
 
@@ -150,6 +150,23 @@ function User() {
                     </p>
 
                 </div>
+
+
+
+
+
+
+                {/* LOADING */}
+
+                {
+                    isLoading && (
+
+                        <h2 className="loading-text">
+                            Loading...
+                        </h2>
+
+                    )
+                }
 
 
 
